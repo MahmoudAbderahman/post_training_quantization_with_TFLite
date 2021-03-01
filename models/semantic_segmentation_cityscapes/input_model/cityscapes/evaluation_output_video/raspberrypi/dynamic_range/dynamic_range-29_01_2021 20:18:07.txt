@@ -1,0 +1,12 @@
+Running inference on cityscapes dataset with quantization type: dynamic_range and sample video.
+Evaluation results: 
+
+Number of frames to run on: 60.
+pixel accuracy: 0.7725
+mean class IoU: 0.2911
+class IoU:
+  road    sidewalk    building    pole    traffic light    traffic sign    vegetation    terrain    person     car
+------  ----------  ----------  ------  ---------------  --------------  ------------  ---------  --------  ------
+0.7957      0.1901      0.3998  0.0571           0.1004          0.0653        0.7688     0.0001    0.0264  0.5073
+Inference time: 4063.936 seconds.
+Frames Per Second: 0.015 frames.

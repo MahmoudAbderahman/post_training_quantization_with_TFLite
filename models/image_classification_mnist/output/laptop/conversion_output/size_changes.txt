@@ -1,0 +1,5 @@
+Size of the original keras model is: 271400 bytes.
+Size of the converted model without quantization is: 84452 bytes.
+Size of the dynamic range quantized model is: 23840 bytes.
+Size of the float16 quantized model is: 44272 bytes.
+Size of the int8 quantized model is: 24720 bytes.

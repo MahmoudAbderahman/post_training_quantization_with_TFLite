@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  mnist:
+    container_name: tensorflow-lite-mnist
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+    restart: always

@@ -1,0 +1,10 @@
+Running inference on cityscapes dataset with quantization type: float32 and image: mit_driveseg_sample.
+Evaluation results: 
+
+pixel accuracy: 0.86311
+mean class IoU:0.456921
+class IoU:
+   road    sidewalk    building     pole    traffic light    traffic sign    vegetation    terrain    person      car
+-------  ----------  ----------  -------  ---------------  --------------  ------------  ---------  --------  -------
+0.83411     0.23163     0.53839  0.19229          0.32746         0.36358       0.81053    0.00656   0.42617  0.83849
+Inference time: 0.913 seconds.

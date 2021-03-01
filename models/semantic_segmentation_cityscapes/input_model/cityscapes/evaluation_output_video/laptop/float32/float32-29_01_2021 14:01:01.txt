@@ -1,0 +1,12 @@
+Running inference on cityscapes dataset with quantization type: float32 and sample video.
+Evaluation results: 
+
+Number of frames to run on: 60.
+pixel accuracy: 0.7680
+mean class IoU: 0.2922
+class IoU:
+  road    sidewalk    building    pole    traffic light    traffic sign    vegetation    terrain    person     car
+------  ----------  ----------  ------  ---------------  --------------  ------------  ---------  --------  ------
+0.7958      0.1761      0.3882  0.0565           0.1375          0.0654         0.759     0.0008    0.0334  0.5093
+Inference time: 406.534 seconds.
+Frames Per Second: 0.148 frames.

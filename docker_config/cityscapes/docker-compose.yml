@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+   deeplab:
+      container_name: cityscapes
+      build:
+        context: .
+        dockerfile: Dockerfile
+      network_mode: host
+      restart: always

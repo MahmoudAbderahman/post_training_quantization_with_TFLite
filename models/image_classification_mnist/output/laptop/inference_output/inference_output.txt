@@ -1,0 +1,8 @@
+Converted TF Lite Model Without quantization model accuracy is 97.9500% (Number of test samples=10000)
+Dynamic Range Quantization model accuracy is 98.0100% (Number of test samples=10000)
+Float16 Quantization model accuracy is 97.9500% (Number of test samples=10000)
+INT8 Quantized model accuracy is 97.9200% (Number of test samples=10000)
+Inference time with no quantization: 1.742 seconds.
+Inference time with dynamic range quantization: 1.726 seconds.
+Inference time with float16 quantization: 1.661 seconds.
+Inference time with int8 quantization: 4.689 seconds.
