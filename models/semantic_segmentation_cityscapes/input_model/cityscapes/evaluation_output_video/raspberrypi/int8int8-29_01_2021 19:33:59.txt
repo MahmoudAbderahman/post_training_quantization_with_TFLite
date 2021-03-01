@@ -1,4 +1,0 @@
-Running inference on cityscapes dataset with quantization type: int8 and sample video.
-Evaluation results: 
-
-Number of frames to run on: 60.
