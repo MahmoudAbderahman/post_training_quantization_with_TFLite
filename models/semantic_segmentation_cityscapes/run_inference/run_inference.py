@@ -43,6 +43,7 @@ def vis_segmentation_stream(image, seg_map, index):
     plt.tight_layout()
     output_dir = os.path.abspath('../input_model/cityscapes/img/')
     images_output_dir = os.path.join(output_dir, 'output_figures_video/raspberrypi/int8/')
+    #images_output_dir = os.path.join(output_dir, 'output_figures_video/laptop/int8/')
     index_for_filename = index + 1
     plt.savefig(images_output_dir + 'figure:' + str(index_for_filename) + '.png')
     plt.close()
@@ -63,9 +64,11 @@ def run_inference_video_cityscapes():
     OUTPUT_FILE = ('{}-{}.txt').format(quantization_type,datetime.now().strftime("%d_%m_%Y %H:%M:%S"))
     
     output_file_dir = os.path.abspath('../input_model/cityscapes/evaluation_output_video/raspberrypi/int8/' + OUTPUT_FILE)
+    #output_file_dir = os.path.abspath('../input_model/cityscapes/evaluation_output_video/laptop/int8/' + OUTPUT_FILE)
     file = open(output_file_dir, "w+")
-    
+    print("Running inference on cityscapes dataset with quantization type: {} and sample video.\n".format(quantization_type))
     file.write("Running inference on cityscapes dataset with quantization type: {} and sample video.\n".format(quantization_type))
+    print("Evaluation results: \n\n")
     file.write("Evaluation results: \n\n")
     dataset_name = get_dataset_name()
     SAMPLE_VIDEO = '../input_model/{}/video/mit_driveseg_sample.mp4'.format(dataset_name)
@@ -74,7 +77,8 @@ def run_inference_video_cityscapes():
 
     video = cv.VideoCapture(SAMPLE_VIDEO)
     # num_frames = 598  # uncomment to use the full sample video
-    num_frames = 10
+    num_frames = 5
+    print("Number of frames to run on: {}.\n".format(num_frames))
     file.write("Number of frames to run on: {}.\n".format(num_frames))
     time_before_inference = time.time()
     try:
@@ -121,7 +125,9 @@ def run_inference_video_cityscapes():
 
     print(tabulate([class_iou], headers=LABEL_NAMES_CITYSCAPES[[0, 1, 2, 5, 6, 7, 8, 9, 11, 13]]))
     file.write(tabulate([class_iou], headers=LABEL_NAMES_CITYSCAPES[[0, 1, 2, 5, 6, 7, 8, 9, 11, 13]]))
+    print('\nInference time: {} seconds.'.format(inference_time))
     file.write('\nInference time: {} seconds.'.format(inference_time))
+    print('\nFrames Per Second: {} frames.'.format(np.round(frames_per_second, 3)))
     file.write('\nFrames Per Second: {} frames.'.format(np.round(frames_per_second, 3)))
 
     file.close()
