@@ -209,7 +209,7 @@ def get_cropped_image(image, input_size):
     else:
         new_size = (int(old_size[1] * desired_ratio), old_size[1])
 
-    print(new_size, old_size)
+    #print(new_size, old_size)
 
     # Cropping the original image to the desired aspect ratio
     delta_w = new_size[0] - old_size[0]
