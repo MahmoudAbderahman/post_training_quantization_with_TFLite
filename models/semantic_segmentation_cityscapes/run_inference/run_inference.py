@@ -230,7 +230,7 @@ def get_segmentation_map(SAMPLE_IMAGE):
 
     # Get image size - converting from BHWC to WH # ([1,1025,2049,19]: Shape of ResizeBilinear_2 op)
     input_size = input_details[0]['shape'][2], input_details[0]['shape'][1]
-    print(input_size)
+    #print(input_size)
 
     image = SAMPLE_IMAGE
 
