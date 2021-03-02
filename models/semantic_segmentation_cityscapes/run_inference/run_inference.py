@@ -68,7 +68,7 @@ def run_inference_video_cityscapes():
     file = open(output_file_dir, "w+")
     print("Running inference on cityscapes dataset with quantization type: {} and sample video.\n".format(quantization_type))
     file.write("Running inference on cityscapes dataset with quantization type: {} and sample video.\n".format(quantization_type))
-    print("Evaluation results: \n\n")
+    #print("Evaluation results: \n\n")
     file.write("Evaluation results: \n\n")
     dataset_name = get_dataset_name()
     SAMPLE_VIDEO = '../input_model/{}/video/mit_driveseg_sample.mp4'.format(dataset_name)
