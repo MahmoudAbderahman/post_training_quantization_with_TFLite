@@ -42,8 +42,8 @@ def vis_segmentation_stream(image, seg_map, index):
     plt.grid('off')
     plt.tight_layout()
     output_dir = os.path.abspath('../input_model/cityscapes/img/')
-    images_output_dir = os.path.join(output_dir, 'output_figures_video/raspberrypi/int8/')
-    #images_output_dir = os.path.join(output_dir, 'output_figures_video/laptop/int8/')
+    #images_output_dir = os.path.join(output_dir, 'output_figures_video/raspberrypi/int8/')
+    images_output_dir = os.path.join(output_dir, 'output_figures_video/laptop/int8/')
     index_for_filename = index + 1
     plt.savefig(images_output_dir + 'figure:' + str(index_for_filename) + '.png')
     plt.close()
@@ -63,8 +63,8 @@ def run_inference_video_cityscapes():
     
     OUTPUT_FILE = ('{}-{}.txt').format(quantization_type,datetime.now().strftime("%d_%m_%Y %H:%M:%S"))
     
-    output_file_dir = os.path.abspath('../input_model/cityscapes/evaluation_output_video/raspberrypi/int8/' + OUTPUT_FILE)
-    #output_file_dir = os.path.abspath('../input_model/cityscapes/evaluation_output_video/laptop/int8/' + OUTPUT_FILE)
+    #output_file_dir = os.path.abspath('../input_model/cityscapes/evaluation_output_video/raspberrypi/int8/' + OUTPUT_FILE)
+    output_file_dir = os.path.abspath('../input_model/cityscapes/evaluation_output_video/laptop/int8/' + OUTPUT_FILE)
     file = open(output_file_dir, "w+")
     print("Running inference on cityscapes dataset with quantization type: {} and sample video.\n".format(quantization_type))
     file.write("Running inference on cityscapes dataset with quantization type: {} and sample video.\n".format(quantization_type))
