@@ -1,1 +1,1 @@
-# Post-Training Quantization with TensorFlow Lite
+# Post-Training Quantization of Machine Learning models with TensorFlow Lite
