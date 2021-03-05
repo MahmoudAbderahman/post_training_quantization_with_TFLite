@@ -5,4 +5,4 @@ The task of the topic is using TensorFlow Lite to optimize two machine learning 
 
 The image classification model was trained on the [MNIST dataset](http://yann.lecun.com/exdb/mnist/) and the semantic segmentation model was trained on the [Cityscapes](https://www.cityscapes-dataset.com/) dataset.
 ## Structure
-In the ```../jars```
+In the ```docker_config``` directory, there are two directories that contain the Docker Configuration to create Docker image for each of the models to run on Raspberry Pi. 
