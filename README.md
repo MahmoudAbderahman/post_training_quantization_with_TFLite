@@ -1,5 +1,21 @@
 # Post-Training Quantization of Machine Learning models with TensorFlow Lite
 This project is the practical implementation of the Bachelor's Thesis's topic: Benchmarking Post-Training Quantization for Optimizing Machine Learning Inference on compute-limited edge devices. 
+## Table of contents 
+* [Task](#task)
+  * [Evaluation metrics](#evaluation-metrics)
+  * [Structure](#structure)
+  * [Results](#results)
+    + [MNIST-classification](#mnist-classification)
+      - [Model size reduction](#model-size-reduction)
+      - [Inference time](#inference-time)
+      - [Accuracy](#accuracy)
+      - [Visual results](#visual-results)
+    + [Cityscapes-Semantic Segmentation](#cityscapes-semantic-segmentation)
+      - [Model size reduction](#model-size-reduction-1)
+      - [Pixel accuracy and Mean Intersection over Union (mIoU)](#pixel-accuracy-and-mean-intersection-over-union)
+      - [Visual results](#visual-results-1)
+
+
 ## Task
 The task of the topic is using TensorFlow Lite to optimize two machine learning models focused on image classification and semantic segmentation, respectively using the post-training quantization technique provided by TensorFlow Lite. After the model was quantized/optimized, inference was ran using the unoptimized and optimized models on a laptop (Intel-processor based) and on a Raspberry Pi 4 (ARM-processor based). Inference results were compared after running inference with both models in their quantized/unquantized formats.
 
@@ -28,3 +44,31 @@ The ```models``` directory contains two directories:
           6. ```video``` contains the video, from which the frames are being taken to run inference on.
       2. ```convert_to_tflite``` directory contains a shell file and a python script to convert the frozen graph to quantized and unquantized models.
       3. ```run_inference``` directory contains a shell file and python script to define which type to run inference with and saves results on the disk.
+
+## Results
+For both image classification and semantic segmentation models, results showed an expected reduction in model size when different quantization techniques were applied.  Accuracy and mIOU, in both the cases didn’t change by a huge margin from that obtained on the original model. In fact, in some cases, applying quantization actually led to an improvement in accuracy.  The inference speed regarding the image classification model has improved adequately. On the other hand, no improvement was obtained on inference speed concerning the semantic segmentation model. In fact, in some cases, latency on Raspberry Pi increasedby a factor of 10.
+### MNIST-classification
+
+#### Model size reduction
+![](results/classification/size.png)
+
+#### Inference time
+![](results/classification/inference_time.png)
+
+#### Accuracy
+![](results/classification/accuracy.png)
+
+#### Visual results
+![](results/classification/visual_results.png)
+
+### Cityscapes-Semantic Segmentation
+
+#### Model size reduction
+![](results/SemSeg/model_size.png)
+
+#### Pixel accuracy and Mean Intersection over Union
+![](results/SemSeg/inference_time.png)
+
+#### Visual results
+![](results/SemSeg/visual_results.png)
+
