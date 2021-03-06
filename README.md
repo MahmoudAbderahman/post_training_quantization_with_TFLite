@@ -1,7 +1,7 @@
 # Post-Training Quantization of Machine Learning models with TensorFlow Lite
 This project is the practical implementation of the Bachelor's Thesis's topic: Benchmarking Post-Training Quantization for Optimizing Machine Learning Inference on compute-limited edge devices. 
 ## Table of contents 
-* [Task](#task)
+  * [Task](#task)
   * [Evaluation metrics](#evaluation-metrics)
   * [Structure](#structure)
   * [Results](#results)
